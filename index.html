@@ -32,22 +32,19 @@
     <div class="collapse collapse-plus bg-base-200 text-sm">
       <input type="radio" name="my-accordion-3" checked="checked" />
       <div class="collapse-title text-2xl font-semibold">About Me</div>
-      <div class="collapse-content">
-        <p id="about-me" class="text-justify">
-          <script type="module">
-            import content from "./content/about_me.txt?raw";
-            document.getElementById("about-me").textContent = content;
-          </script>
-        </p>
+      <div class="collapse-content px-4">
+        <p id="about-me" class="text-justify"></p>
       </div>
     </div>
 
     <div class="collapse collapse-plus bg-base-200">
       <input type="radio" name="my-accordion-3" />
-      <div class="collapse-title text-2xl font-semibold">Projects</div>
-      <div class="collapse-content">
-
+      <div class="collapse-content flex overflow-x-auto snap-x snap-mandatory">
+        <div id="projects-container" class="px-4 flex flex-row gap-4"></div>
       </div>
+     <div class="absolute w-8 h-full left-0 bg-gradient-to-r from-base-200 to-transparent pointer-events-none"></div>
+     <div class="absolute w-8 h-full right-0 bg-gradient-to-l from-base-200 to-transparent pointer-events-none"></div>
+     <div class="collapse-title text-2xl font-semibold">Projects</div>
     </div>
 
     <div class="collapse collapse-plus bg-base-200">
@@ -126,5 +123,7 @@
       </div>
     </div>
   </div>
+
+  <script type="module" src="main.js"></script>
 </body>
 </html>
