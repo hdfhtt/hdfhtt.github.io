@@ -1,6 +1,0 @@
-Hi, my name is Hadif Hatta. I am a computer science student, currently
-in my final year, pursuing Bachelor's Degree of Computer Science @
-International Islamic University Malaysia. I started my CS journey
-since high school, from scripting a gamemode, to developing my own
-apps. My biggest achievement so far to have an app that have 100K of
-downloads on Google Play Store.
