@@ -51,11 +51,15 @@ projects:
 
   - pastel-ux:
     name: Pastel UX
+    desc: |
+      A project focused on creating a soft and delicate pastel-colored icon pack based on Google's
+      Material Design guidelines. Initially conceived as a UI/UX redesign project, it ultimately
+      concentrated on color palettes and icon design.
     icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/pastel-ux.png?raw=true"
     thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/pastel-ux.png?raw=true"
     buttons:
       - label: Web Archive
         icon-src: "https://unpkg.com/simple-icons@v14/icons/googleplay.svg"
-        link: "https://web.archive.org/web/20220525070416im_/https://play-lh.googleusercontent.com/_rwK25yDCiJbWZiYUXskwjTwJ65pAImgwt4545Q89lgeNXfv3V2SAJivbFnGESfvI6w=w1440-h620"
+        link: "https://web.archive.org/web/20220525070416/https://play.google.com/store/apps/details?id=hdfhtt.pastel.app"
   # ...
   # - project-n
