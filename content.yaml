@@ -10,11 +10,10 @@ projects:
   - skinmnemonist:
     name: SkinMnemonist
     desc: |
-      An app made to help users track and manage their skincare product usages.
-      This app helps users replenish their skincare products before it's too
-      late. This app is associate with my BCompSc final year project.
-    icon-src: /assets/icons/smm.png
-    thumbs-src: /assets/thumbs/smm.png
+      A mobile application developed for my BCompSc final year project, designed to help users track
+      and manage their skincare product usage, ensuring timely replenishment.
+    icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/smm.png?raw=true"
+    thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/smm.png?raw=true"
     buttons:
       - label: Download Beta
         icon-src: "https://unpkg.com/simple-icons@v14/icons/googleplay.svg"
@@ -24,26 +23,39 @@ projects:
   - cupcakelab:
     name: CupCakeLab
     desc: |
-      Lorem ipsum dolor si amet.
-    icon-src: /assets/icons/cupcakelab.png
-    thumbs-src: /assets/thumbs/cupcakelab.png
+      A Flutter-based mobile application showcasing the implementation of the framework and Material
+      Design principles. It allows users to browse, search, and save their favorite cupcake recipes
+      using the Spoonacular API.
+    icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/cupcakelab.png?raw=true"
+    thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/cupcakelab.png?raw=true"
     buttons:
       - label: Design
         icon-src: "https://unpkg.com/simple-icons@v14/icons/figma.svg"
-        link: "#"
+        link: "https://www.figma.com/design/s3r5E9pcbQcgzc0reHnzXm/App%3A-CupCakeLab?node-id=54195-34798&t=QZXv0L8uJcp7rblk-1"
       - label: Demo
         icon-src: "https://unpkg.com/simple-icons@v14/icons/github.svg"
-        link: "#"
+        link: "https://github.com/hdfhtt/CupCakeLab"
 
   - lapar:
     name: Sistem Aplikasi Lapar
     desc: |
-      Lorem ipsum dolor si amet.
-    icon-src: /assets/icons/lapar.png
-    thumbs-src: /assets/thumbs/lapar.png
+      A conceptual mobile application designed for a Bahasa Melayu class project. It aims to
+      streamline the food ordering process for the IIUM Gombak Campus community at cafeterias and
+      restaurants.
+    icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/lapar.png?raw=true"
+    thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/lapar.png?raw=true"
     buttons:
       - label: Design
         icon-src: "https://unpkg.com/simple-icons@v14/icons/figma.svg"
-        link: "#"
+        link: "https://www.figma.com/design/kvaclNuFEoFeIaUd1XlXyN/Sistem-Aplikasi-Lapar?node-id=0-1&t=flCKxkpnmhx1ZrCq-1"
+
+  - pastel-ux:
+    name: Pastel UX
+    icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/pastel-ux.png?raw=true"
+    thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/pastel-ux.png?raw=true"
+    buttons:
+      - label: Web Archive
+        icon-src: "https://unpkg.com/simple-icons@v14/icons/googleplay.svg"
+        link: "https://web.archive.org/web/20220525070416im_/https://play-lh.googleusercontent.com/_rwK25yDCiJbWZiYUXskwjTwJ65pAImgwt4545Q89lgeNXfv3V2SAJivbFnGESfvI6w=w1440-h620"
   # ...
   # - project-n
