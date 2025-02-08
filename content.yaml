@@ -1,0 +1,49 @@
+about-me: |
+  Hi, my name is Hadif Hatta. I am a computer science student, currently
+  in my final year, pursuing Bachelor of Computer Science (BCompScience) @
+  International Islamic University Malaysia. I started my CS journey
+  since high school, from scripting a gamemode, to developing my own
+  apps. My biggest achievement so far to have an app that have 100K of
+  downloads on Google Play Store.
+
+projects:
+  - skinmnemonist:
+    name: SkinMnemonist
+    desc: |
+      An app made to help users track and manage their skincare product usages.
+      This app helps users replenish their skincare products before it's too
+      late. This app is associate with my BCompSc final year project.
+    icon-src: /assets/icons/smm.png
+    thumbs-src: /assets/thumbs/smm.png
+    buttons:
+      - label: Download Beta
+        icon-src: "https://unpkg.com/simple-icons@v14/icons/googleplay.svg"
+        link: "https://play.google.com/store/apps/details?id=dev.hdfhtt.skinmnemonist"
+    new: true
+
+  - cupcakelab:
+    name: CupCakeLab
+    desc: |
+      Lorem ipsum dolor si amet.
+    icon-src: /assets/icons/cupcakelab.png
+    thumbs-src: /assets/thumbs/cupcakelab.png
+    buttons:
+      - label: Design
+        icon-src: "https://unpkg.com/simple-icons@v14/icons/figma.svg"
+        link: "#"
+      - label: Demo
+        icon-src: "https://unpkg.com/simple-icons@v14/icons/github.svg"
+        link: "#"
+
+  - lapar:
+    name: Sistem Aplikasi Lapar
+    desc: |
+      Lorem ipsum dolor si amet.
+    icon-src: /assets/icons/lapar.png
+    thumbs-src: /assets/thumbs/lapar.png
+    buttons:
+      - label: Design
+        icon-src: "https://unpkg.com/simple-icons@v14/icons/figma.svg"
+        link: "#"
+  # ...
+  # - project-n
