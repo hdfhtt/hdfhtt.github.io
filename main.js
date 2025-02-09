@@ -21,7 +21,7 @@ try {
     }
 
     const cardHTML = `
-      <div class="card bg-base-100 image-full w-fit min-w-96 shadow-sm snap-always snap-center">
+      <div class="card bg-base-100 image-full w-84 lg:w-96 h-64 shadow-sm snap-always snap-center">
         <figure>
           <img src="${project['thumbs-src']}" />
         </figure>
