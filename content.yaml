@@ -68,3 +68,20 @@ projects:
         link: "https://web.archive.org/web/20220525070416/https://play.google.com/store/apps/details?id=hdfhtt.pastel.app"
   # ...
   # - project-n
+
+timeline:
+  - year: Present
+    content: Seeking Internship
+    details: "@ Your Company"
+  - year: 2025
+    content: Bachelor of Computer Science (Hons)
+    details: International Islamic University Malaysia
+  - year: 2020
+    content: Information Technology Trainee (Intern, Diploma)
+    details: KidoCode, Kuala Lumpur
+  - year: 2019
+    content: Diploma in Computer Science
+    details: International Islamic College
+  - year: 2016
+    content: Malaysian Cerificate of Education (SPM)
+    details: SMK Sungai Nibong, Penang

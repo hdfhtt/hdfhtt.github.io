@@ -38,6 +38,67 @@ try {
     });
   }
 
+  const timeline = content.timeline;
+  const timelineContainer = document.getElementById('timeline-container');
+
+  timeline.forEach(function callback(event, index) {
+    const isFirstIndex = (index == 0);
+    const isOddIndex = (index % 2) == 0;
+
+    let leftContentHTML;
+    let rightContentHTML;
+
+    if (isOddIndex) {
+      leftContentHTML = `<div class="timeline-start italic">${event.year}</div>`;
+      rightContentHTML = `<div class="timeline-end timeline-box font-medium">
+        ${event.content}
+        <br />
+        <span class="${isFirstIndex ? 'text-secondary' : 'text-primary'} text-xs italic">${event.details}</span>
+      </div>`;
+    } else {
+      leftContentHTML = `<div class="timeline-start timeline-box font-medium">
+        ${event.content}
+        <br />
+        <span class="text-primary text-xs italic">${event.details}</span>
+      </div>`;
+      rightContentHTML = `<div class="timeline-end italic">${event.year}</div>`;
+    }
+
+    let eventHTML = `
+      <li>
+        ${(() => {
+          if (index == 0) {
+            return ''
+          } else if (index == 1) {
+            return '<hr class="bg-base-200" />'
+          } else {
+            return '<hr class="bg-primary" />'
+          }
+        })()}
+
+        ${leftContentHTML}
+
+        <div class="timeline-middle">
+            <span class="material-symbols-rounded align-middle ${isFirstIndex ? 'text-secondary' : 'text-primary'}">trip_origin</span>
+        </div>
+
+        ${rightContentHTML}
+
+        ${(() => {
+          if (index == 0) {
+            return '<hr class="bg-base-200" />'
+          } else if (index == (timeline.length - 1)) {
+            return ''
+          } else {
+            return '<hr class="bg-primary" />'
+          }
+        })()}
+      </li>
+    `;
+
+    timelineContainer.innerHTML += eventHTML;
+  });
+
   const projects = content.projects;
   const projectsContainer = document.getElementById('projects-container');
 
