@@ -28,45 +28,48 @@
     </div>
   </div>
 
-  <div class="m-4 grid gap-4 lg:mx-16">
-    <div class="collapse collapse-plus bg-base-200 text-sm">
-      <input type="radio" name="my-accordion-3" checked="checked" />
-      <div class="collapse-title text-2xl font-semibold">About Me</div>
-      <div class="collapse-content px-4">
-        <p id="about-me" class="text-justify"></p>
-      </div>
+  <div class="m-4 lg:mx-16 lg:px-4 mockup-window bg-primary-content border border-base-300">
+    <div class="m-4 lg:px-16 grid lg:grid-cols-2 place-content-center text-center lg:text-start">
+      <img id="profile-image-src" class="rounded-full size-16 lg:size-32 mx-auto lg:ml-0 lg:mr-auto" />
+      <p id="profile-name" class="col-start-1 font-semibold py-1 text-lg"></p>
+      <p id="profile-title" class="col-start-1 text-sm"></p>
+      <p id="profile-title-alt" class="col-start-1 text-xs text-secondary"></p>
+      <button id="call-to-action" class="col-start-1 btn btn-soft btn-primary mx-auto lg:ml-0 lg:mr-auto my-2 w-48"></button>
     </div>
+  </div>
 
-    <div class="collapse collapse-plus bg-base-200">
+  <div class="m-4 lg:mx-16 grid gap-4">
+    <div class="collapse collapse-plus bg-primary-content lg:px-16">
       <input type="radio" name="my-accordion-3" checked="checked" />
       <div class="collapse-content flex overflow-x-auto snap-x snap-mandatory">
         <div id="projects-container" class="flex flex-row gap-4 mx-4 my-2"></div>
       </div>
-     <div class="absolute w-4 lg:w-8 h-full left-0 bg-gradient-to-r from-base-200 to-transparent pointer-events-none"></div>
-     <div class="absolute w-4 lg:w-8 h-full right-0 bg-gradient-to-l from-base-200 to-transparent pointer-events-none"></div>
+     <div class="absolute w-4 lg:w-8 h-full left-0 lg:left-16 bg-gradient-to-r from-primary-content to-transparent pointer-events-none"></div>
+     <div class="absolute w-4 lg:w-8 h-full right-0 lg:right-16 bg-gradient-to-l from-primary-content to-transparent pointer-events-none"></div>
      <div class="collapse-title text-2xl font-semibold">Projects</div>
     </div>
 
-    <div class="collapse collapse-plus bg-base-200">
+    <div class="collapse collapse-plus bg-primary-content lg:px-16">
       <input type="radio" name="my-accordion-3" />
       <div class="collapse-title text-2xl font-semibold">My Journey</div>
       <div class="collapse-content text-sm lg:text-lg">
-        <ul class="timeline timeline-vertical">
+
+        <ul class="timeline timeline-vertical m-4">
           <li>
             <div class="timeline-start italic">Present</div>
             <div class="timeline-middle">
-              <span class="material-symbols-rounded align-middle text-current">trip_origin</span>
+              <span class="material-symbols-rounded align-middle text-secondary">trip_origin</span>
             </div>
-            <div class="timeline-end timeline-box">
-              Looking for Internship
+            <div class="timeline-end timeline-box font-medium">
+              Seeking Internship
               <br />
-              <span class="text-secondary text-xs italic">Your Company</span>
+              <span class="text-secondary text-xs italic">@ Your Company</span>
             </div>
-            <hr class="bg-base-300" />
+            <hr class="bg-base-200" />
           </li>
 
           <li>
-            <hr class="bg-base-300" />
+            <hr class="bg-base-200" />
             <div class="timeline-end">2025</div>
             <div class="timeline-middle">
               <span class="material-symbols-rounded align-middle text-primary">trip_origin</span>
@@ -120,6 +123,7 @@
             </div>
           </li>
         </ul>
+
       </div>
     </div>
   </div>

@@ -1,10 +1,15 @@
-about-me: |
-  Hi, my name is Hadif Hatta. I am a computer science student, currently
-  in my final year, pursuing Bachelor of Computer Science (BCompScience) @
-  International Islamic University Malaysia. I started my CS journey
-  since high school, from scripting a gamemode, to developing my own
-  apps. My biggest achievement so far to have an app that have 100K of
-  downloads on Google Play Store.
+profile:
+  name: Hadif Hatta
+  image-src: "https://media.licdn.com/dms/image/v2/D5603AQFj9Rtl_v1WRg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1665908302206?e=2147483647&v=beta&t=qaNIYKtZI-02Q-laEGFIhPKUAVAyVy0vLcp9DYB7AJQ"
+  title: Final Year Computer Science Student
+  title-alt: International Islamic University Malaysia
+  summary: |
+    A passionate computer science student with a strong background in software development, seeking to
+     expand skills and gain experience in the software engineering field.
+
+call-to-action:
+  label: LinkedIn Profile
+  link: "https://www.linkedin.com/in/hdfhtt/"
 
 projects:
   - skinmnemonist:
