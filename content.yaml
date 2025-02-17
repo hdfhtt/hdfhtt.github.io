@@ -85,3 +85,116 @@ timeline:
   - year: 2016
     content: Malaysian Cerificate of Education (SPM)
     details: SMK Sungai Nibong, Penang
+
+skills:
+  - name: Mobile Development
+    content:
+      - framework:
+          type: rated
+          items:
+            - name: Flutter
+              icon-src: "https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg"
+              level: 4
+              desc: Dart
+            - name: Jetpack Compose
+              icon-src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC97Z8BResg5dlPqczsRCFhP6zewWX0X0e7fVPG-G7PuUZwwZVsi9OPoqJYkgqT2h0FI95SsmWzVEgpt8b8HAqFiIxZ98TFtY4lE0b8UrtVJ2HrJebRwl6C9DslsQDl9KnBIrdHS6LtkY/s1600/jetpack+compose+icon_RGB.png"
+              level: 5
+              desc: Kotlin
+            - name: Android (Native)
+              icon-src: "https://upload.wikimedia.org/wikipedia/commons/3/31/Android_robot_head.svg"
+              level: 5
+              desc: Java, Kotlin
+      - design:
+          type: rated
+          items:
+            - name: Material Design
+              icon-src: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Material_Design_Logo.svg"
+              level: 5
+              desc: Design System
+      - tools:
+          items:
+            - name: Android Studio
+              icon-src: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Android_Studio_icon_%282023%29.svg"
+            - name: IntelliJ IDEA
+              icon-src: "https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg"
+            - name: Git
+              icon-src: "https://www.svgrepo.com/download/303548/git-icon-logo.svg"
+
+  - name: Web Development
+    content:
+      - frontend:
+          type: rated
+          items:
+            - name: Next.js
+              icon-src: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.svg"
+              level: 4
+              desc: JavaScript
+            - name: Vite
+              icon-src: "https://vite.dev/logo.svg"
+              level: 3
+              desc: JavaScript
+            - name: Tailwind CSS
+              icon-src: "https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg"
+              level: 5
+              desc: CSS
+      - backend:
+          type: rated
+          items:
+            - name: Node.js
+              icon-src: "https://nodejs.org/static/logos/jsIconGreen.svg"
+              level: 5
+              desc: JavaScript
+            - name: Flask
+              icon-src: "https://icon.icepanel.io/Technology/png-shadow-512/Flask.png"
+              level: 2
+              desc: Python
+            - name: PHP
+              icon-src: "https://www.php.net/images/logos/new-php-logo.svg"
+              level: 2
+              desc: PHP
+      - deployment:
+          items:
+            - name: Heroku
+              icon-src: "https://www.svgrepo.com/download/353869/heroku-icon.svg"
+            - name: Vercel
+              icon-src: "https://static.wikia.nocookie.net/logopedia/images/a/a7/Vercel_favicon.svg"
+      - tools:
+          items:
+            - name: Visual Studio Code
+              icon-src: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+            - name: npm
+              icon-src: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg"
+            - name: Git
+              icon-src: "https://www.svgrepo.com/download/303548/git-icon-logo.svg"
+
+  - name: Desktop Development
+    content:
+      - framework:
+          type: rated
+          items:
+            - name: .NET Framework
+              icon-src: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg"
+              level: 4
+              desc: C#
+            - name: WPF
+              icon-src: "https://www.ambient-it.net/wp-content/uploads/2016/04/wpf-logo-175.png.webp"
+              level: 3
+              desc: C#, XAML
+            - name: Java Swing
+              icon-src: "https://www.svgrepo.com/download/184143/java.svg"
+              level: 4
+              desc: Java
+            - name: JavaFX
+              icon-src: "https://www.svgrepo.com/download/184143/java.svg"
+              level: 3
+              desc: Java
+      - deployment:
+          items:
+            - name: InstallShield
+              icon-src: "https://static.wikia.nocookie.net/logopedia/images/8/86/InstallShield_Setup_icon_%282014-present%29.png"
+      - tools:
+          items:
+            - name: Visual Studio
+              icon-src: "https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_Icon_2019.svg"
+            - name: Git
+              icon-src: "https://www.svgrepo.com/download/303548/git-icon-logo.svg"
