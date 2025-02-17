@@ -99,7 +99,6 @@ try {
       </a>
     `).join('') || '';
 
-
     const cardHTML = `
       <div class="card bg-base-100 image-full w-80 lg:w-96 h-64 shadow-sm snap-always snap-center">
         <figure>
@@ -122,6 +121,91 @@ try {
     `;
 
     projectsContainer.innerHTML += cardHTML;
+  });
+
+  // Skills
+  const skills = content.skills;
+  const skillsContainer = document.getElementById('skills-container');
+
+  skills.forEach(skillCategory => {
+    const skillCategoryName = skillCategory.name;
+    const skillCategoryContent = skillCategory.content;
+
+    let subcategoriesHTML = '';
+
+    skillCategoryContent.forEach(subcategory => {
+      const subcategoryType = Object.keys(subcategory)[0];
+      const subcategoryData = subcategory[subcategoryType];
+
+      const isRated = subcategoryData.type === 'rated';
+
+      subcategoriesHTML += `<span class="font-medium capitalize">${subcategoryType}</span>`;
+
+      if (isRated) {
+        subcategoriesHTML += `<ul>`;
+
+        subcategoryData.items.forEach(item => {
+          const levelBars = Array.from({ length: 5 }, (_, i) => `
+            <div class="h-2 rounded w-full ${i < item.level ? (item.level === 5 ? 'bg-secondary' : 'bg-primary') : 'bg-base-300'}"></div>
+          `).join('');
+
+          subcategoriesHTML += `
+            <li class="pb-2 flex gap-3 items-center">
+              <img class="size-10 min-w-10 h-auto max-h-10 bg-base-200 lg:bg-base-100 min-h-10 p-1 rounded" src="${item['icon-src']}" />
+              <div class="w-full">
+                <div class="flex justify-between">
+                  <span class="font-medium">${item.name}</span>
+                  <span>${
+                    item.level === 5
+                    ? 'Expert'
+                    : item.level === 4
+                    ? 'Advanced'
+                    : item.level === 3
+                    ? 'Proficient'
+                    : item.level === 2
+                    ? 'Intermediate'
+                    : item.level === 1
+                    ? 'Beginner'
+                    : 'Unknown'
+                  }</span>
+                </div>
+                <div class="flex gap-2 py-2">
+                  ${levelBars}
+                </div>
+                <div class="text-xs">
+                  <span>${item.desc}</span>
+                </div>
+              </div>
+            </li>
+          `;
+        });
+
+        subcategoriesHTML += `</ul>`;
+      } else {
+        subcategoriesHTML += `<ul class="flex gap-4">`;
+
+        subcategoryData.items.forEach(item => {
+          subcategoriesHTML += `
+            <li class="tooltip pb-2" data-tip="${item.name}">
+              <img class="size-10 min-w-10 h-auto max-h-10 bg-base-100 min-h-10 p-1 rounded" src="${item['icon-src']}" />
+            </li>
+          `;
+        });
+
+        subcategoriesHTML += `</ul>`;
+      }
+    });
+
+    const skillCategoryHTML = `
+      <div class="lg:card w-96 lg:w-80 lg:bg-base-200 shadow-sm snap-always snap-center">
+        <div class="card-body py-4 lg:py-8">
+          <h2 class="text-xl font-bold">${skillCategoryName}</h2>
+          ${subcategoriesHTML}
+        </div>
+      </div>
+    `;
+
+    skillsContainer.innerHTML += skillCategoryHTML;
   });
 
 } catch (error) {
