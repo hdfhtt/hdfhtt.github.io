@@ -31,10 +31,17 @@
   <div class="m-4 lg:mx-16 lg:px-4 mockup-window bg-primary-content border border-base-300">
     <div class="m-4 lg:px-16 grid lg:grid-cols-2 place-content-center text-center lg:text-start">
       <img id="profile-image-src" class="rounded-full size-16 lg:size-32 mx-auto lg:ml-0 lg:mr-auto" />
-      <p id="profile-name" class="col-start-1 font-semibold py-1 text-lg"></p>
-      <p id="profile-title" class="col-start-1 text-sm"></p>
-      <p id="profile-title-alt" class="col-start-1 text-xs text-secondary"></p>
-      <button id="call-to-action" class="col-start-1 btn btn-soft btn-primary mx-auto lg:ml-0 lg:mr-auto my-2 w-48"></button>
+      <p id="profile-name" class="col-start-1 font-semibold py-1 text-xl"></p>
+      <p id="profile-title" class="col-start-1"></p>
+      <p id="profile-title-alt" class="col-start-1 text-sm text-secondary"></p>
+      <div class="col-start-1 mx-auto lg:ml-0 lg:mr-auto my-2 flex gap-2">
+        <button class="btn btn-primary w-48">
+          <a href="https://www.linkedin.com/in/hdfhtt/" target="_new">LinkedIn</a>
+        </button>
+        <button class="btn btn-soft btn-primary w-48">
+          <a href="https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/Resume.pdf?raw=true" target="_new">Résumé</a>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -46,11 +53,11 @@
       </div>
      <div class="absolute w-4 lg:w-8 h-full left-0 lg:left-16 bg-gradient-to-r from-primary-content to-transparent pointer-events-none"></div>
      <div class="absolute w-4 lg:w-8 h-full right-0 lg:right-16 bg-gradient-to-l from-primary-content to-transparent pointer-events-none"></div>
-     <div class="collapse-title text-2xl font-semibold">Projects</div>
+     <div class="collapse-title text-2xl font-semibold">Featured Projects</div>
     </div>
 
     <div class="collapse collapse-plus bg-primary-content lg:px-16">
-      <input type="radio" name="my-accordion-3" checked="checked" />
+      <input type="radio" name="my-accordion-3" />
       <div class="collapse-content flex overflow-x-auto snap-x snap-mandatory">
         <div id="skills-container" class="flex flex-row gap-4 mx-4 lg:my-2"></div>
       </div>
@@ -62,23 +69,25 @@
     <div class="collapse collapse-plus bg-primary-content lg:px-16">
       <input type="radio" name="my-accordion-3" />
       <div class="collapse-title text-2xl font-semibold">My Journey</div>
-      <div class="collapse-content text-sm lg:text-lg">
+      <div class="collapse-content lg:text-lg">
         <ul class="timeline timeline-vertical m-4" id="timeline-container"></ul>
       </div>
     </div>
   </div>
 
-  <div class="flex mb-4">
-    <div class="flex flex-row mx-auto items-center font-light">
-      <p class="text-xs">This website is carefully crafted with</p>
-      <img class="size-8 p-1" src="https://vite.dev/logo.svg" />
-      +
-      <img class="size-8 p-1" src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg" />
-      +
-      <img class="size-8 p-1" src="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg" />
-      .
-    </div>
-  </div>
+  <footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+    <aside>
+      <div class="flex flex-row mx-auto items-center font-light">
+        <p class="text-xs">This website is carefully crafted with</p>
+        <img class="size-8 p-1" src="https://vite.dev/logo.svg" />
+        +
+        <img class="size-8 p-1" src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg" />
+        +
+        <img class="size-8 p-1" src="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg" />
+        .
+      </div>
+    </aside>
+  </footer>
 
   <script type="module" src="main.js"></script>
 </body>
