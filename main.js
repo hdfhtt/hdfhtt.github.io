@@ -26,23 +26,6 @@ try {
     }
   }
 
-  // Call to action
-  const callToAction = document.getElementById('call-to-action');
-
-  if (callToAction) {
-    const ctaContent = content['call-to-action'];
-
-    callToAction.textContent = ctaContent.label;
-
-    callToAction.addEventListener('click', () => {
-      if (ctaContent && ctaContent.link) {
-        window.location.href = ctaContent.link;
-      } else {
-        console.error("Link is missing for call to action.");
-      }
-    });
-  }
-
   // Timeline
   const timeline = content.timeline;
   const timelineContainer = document.getElementById('timeline-container');
@@ -52,16 +35,16 @@ try {
     const isEven = index % 2 === 0;
 
     const leftContent = isEven ? `
-      <div class="timeline-start timeline-box font-medium">
+        <div class="timeline-start timeline-box font-medium">
         ${event.content}
         <br />
         <span class="${isFirst ? 'text-secondary' : 'text-primary'} text-xs italic">${event.details}</span>
       </div>` : `
-      <div class="timeline-start italic">${event.year}</div>
+      <div class="timeline-start italic text-sm">${event.year}</div>
     `;
 
     const rightContent = isEven ? `
-      <div class="timeline-end italic">${event.year}</div>` : `
+      <div class="timeline-end italic text-sm">${event.year}</div>` : `
       <div class="timeline-end timeline-box font-medium">
         ${event.content}
         <br />
@@ -93,7 +76,7 @@ try {
 
   projects.forEach(project => {
     const buttonsHTML = project.buttons?.map(button => `
-      <a href="${button.link}" class="btn btn-secondary">
+      <a href="${button.link}" class="btn btn-secondary" target="_new">
         <img class="size-4" src="${button['icon-src']}" alt="${button.label} icon" />
         <span>${button.label}</span>
       </a>
