@@ -94,6 +94,7 @@ try {
             </span>
             ${project.name}
             ${project.new ? '<div class="badge badge-primary">NEW</div>' : ''}
+            ${!!project.label ? `<div class="badge badge-neutral uppercase">${project.label}</div>` : ''}
           </h2>
           <p class="text-justify text-xs">${project.desc}</p>
           <div class="card-actions justify-end">
