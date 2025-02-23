@@ -140,15 +140,15 @@ try {
                   <span class="font-medium">${item.name}</span>
                   <span>${
                     item.level === 5
-                    ? 'Expert'
-                    : item.level === 4
                     ? 'Advanced'
-                    : item.level === 3
+                    : item.level === 4
                     ? 'Proficient'
-                    : item.level === 2
+                    : item.level === 3
                     ? 'Intermediate'
+                    : item.level === 2
+                    ? 'Pre Intermdt'
                     : item.level === 1
-                    ? 'Beginner'
+                    ? 'Basic'
                     : 'Unknown'
                   }</span>
                 </div>
