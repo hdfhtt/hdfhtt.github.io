@@ -11,11 +11,14 @@ projects:
   - skinmnemonist:
     name: SkinMnemonist
     desc: |
-      A mobile application developed for my BCompSc final year project, designed to help users track
+      A mobile application developed for my final year project during Bachelor's degree, designed to help users track
       and manage their skincare product usage, ensuring timely replenishment.
     icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/smm.png?raw=true"
     thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/smm.png?raw=true"
     buttons:
+      - label: Poster
+        icon-src: "https://unpkg.com/simple-icons@v14/icons/imgur.svg"
+        link: "https://i.imgur.com/zIsA6qp.jpeg"
       - label: Download Beta
         icon-src: "https://unpkg.com/simple-icons@v14/icons/googleplay.svg"
         link: "https://play.google.com/store/apps/details?id=dev.hdfhtt.skinmnemonist"
@@ -50,18 +53,35 @@ projects:
         icon-src: "https://unpkg.com/simple-icons@v14/icons/figma.svg"
         link: "https://www.figma.com/design/kvaclNuFEoFeIaUd1XlXyN/Sistem-Aplikasi-Lapar?node-id=0-1&t=flCKxkpnmhx1ZrCq-1"
 
+  - kproject.gis:
+    name: KProject.GIS
+    desc: |
+      As part of my internship during Diploma, this web-based Geographical Information System (GIS) platform is built to identify potential strategic locations for new branches.
+      This data science project showcases my development and data science skills.
+    icon-src: "https://scontent.fkul19-3.fna.fbcdn.net/v/t39.30808-1/331164588_542153277893393_7835782481759126426_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeEIp_aIp970wRiVuwTgbRLdIuBKU5DbSoUi4EpTkNtKhSuRfDyOa2JeKZnnH3xiPyWYzb3x389dgQjto-D_5dPf&_nc_ohc=dYSwslahyfQQ7kNvgHXcLzW&_nc_oc=AdirJgeVQXuIKXyoMv5dgyH9AYZfNg399fWLPwSdhJUS0xlF2fNaa7TLy42R7VgQ_KA&_nc_zt=24&_nc_ht=scontent.fkul19-3.fna&_nc_gid=AuL5LjZc79ijNIaUgAJ5MD4&oh=00_AYAimgnkIeOGhJ78suqXeOO-Oa4BGoubdHNZLmIwWYbIqw&oe=67C16198"
+    thumbs-src: "https://i.imgur.com/lLjS2UO.jpeg"
+    buttons:
+      - label: Screenshots
+        icon-src: "https://unpkg.com/simple-icons@v14/icons/imgur.svg"
+        link: "https://imgur.com/a/kproject-gis-snapshots-RTtVdBJ"
+
   - pastel-ux:
     name: Pastel UX
     desc: |
       A project focused on creating a soft and delicate pastel-colored icon pack based on Google's
       Material Design guidelines. Initially conceived as a UI/UX redesign project, it ultimately
-      concentrated on color palettes and icon design.
+      concentrated on color palettes and icon design. This app achieved 100K of downloads on Play Store.
     icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/pastel-ux.png?raw=true"
     thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/pastel-ux.png?raw=true"
     buttons:
+      - label: Screenshots
+        icon-src: "https://unpkg.com/simple-icons@v14/icons/imgur.svg"
+        link: "https://imgur.com/a/pastel-ux-feedbacks-8vpOENB"
       - label: Web Archive
         icon-src: "https://unpkg.com/simple-icons@v14/icons/googleplay.svg"
         link: "https://web.archive.org/web/20220525070416/https://play.google.com/store/apps/details?id=hdfhtt.pastel.app"
+    label: Discontinued
+
   # ...
   # - project-n
 
@@ -147,7 +167,7 @@ skills:
             - name: PHP
               icon-src: "https://www.php.net/images/logos/new-php-logo.svg"
               level: 2
-              desc: "PHP"
+              desc: PHP
       - deployment:
           items:
             - name: Heroku
