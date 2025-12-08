@@ -1,8 +1,8 @@
 profile:
   name: Hadif Hatta
   image-src: "https://media.licdn.com/dms/image/v2/D5603AQFj9Rtl_v1WRg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1665908302206?e=2147483647&v=beta&t=qaNIYKtZI-02Q-laEGFIhPKUAVAyVy0vLcp9DYB7AJQ"
-  title: Final Year Computer Science Student
-  title-alt: International Islamic University Malaysia
+  title: Android Developer
+  title-alt: VigTech Labs Sdn Bhd
   summary: |
     A passionate computer science student with a strong background in software development, seeking to
      expand skills and gain experience in the software engineering field.
@@ -87,6 +87,9 @@ projects:
 
 timeline:
   - year: Present
+    content: Android Developer
+    details: "VigTech Labs Sdn Bhd"
+  - year: 2025
     content: Software Engineer Intern
     details: "iMocha Sdn Bhd"
   - year: 2025
@@ -134,7 +137,7 @@ skills:
             - name: IntelliJ IDEA
               icon-src: "https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg"
             - name: Git
-              icon-src: "https://www.svgrepo.com/download/303548/git-icon-logo.svg"
+              icon-src: "https://unpkg.com/simple-icons@v14/icons/git.svg"
 
   - name: Web Development
     content:
@@ -181,7 +184,7 @@ skills:
             - name: npm
               icon-src: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg"
             - name: Git
-              icon-src: "https://www.svgrepo.com/download/303548/git-icon-logo.svg"
+              icon-src: "https://unpkg.com/simple-icons@v14/icons/git.svg"
 
   - name: Desktop Development
     content:
@@ -213,7 +216,7 @@ skills:
             - name: Visual Studio
               icon-src: "https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_Icon_2019.svg"
             - name: Git
-              icon-src: "https://www.svgrepo.com/download/303548/git-icon-logo.svg"
+              icon-src: "https://unpkg.com/simple-icons@v14/icons/git.svg"
 
   - name: Data Science & ML
     content:
