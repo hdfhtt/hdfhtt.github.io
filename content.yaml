@@ -32,7 +32,7 @@ projects:
     thumbs-src: "/assets/thumbs/smartlube.png"
     buttons:
       - label: Coming Soon
-    label: IoT
+    label: Unreleased
 
   - skinmnemonist:
     name: SkinMnemonist

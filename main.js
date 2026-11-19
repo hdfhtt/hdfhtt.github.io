@@ -37,9 +37,13 @@ try {
   document.addEventListener('error', (event) => {
     const image = event.target;
 
-    if (image.tagName !== 'IMG' || !image.hasAttribute('data-icon')) return;
+    if (image.tagName !== 'IMG') return;
 
-    image.outerHTML = iconPlaceholderHTML(image.className);
+    if (image.hasAttribute('data-thumb')) {
+      image.remove();
+    } else if (image.hasAttribute('data-icon')) {
+      image.outerHTML = iconPlaceholderHTML(image.className);
+    }
   }, true);
 
   // Profile elements
@@ -113,18 +117,29 @@ try {
   const projectsContainer = document.getElementById('projects-container');
 
   projects.forEach(project => {
-    const buttonsHTML = project.buttons?.map(button => `
-      <a href="${button.link}" class="btn btn-secondary btn-sm" target="_new">
-        ${iconHTML(button['icon-src'], 'size-4', `${button.label} icon`)}
-        <span>${button.label}</span>
-      </a>
-    `).join('') || '';
+    const buttonsHTML = project.buttons?.map(button => {
+      const icon = button['icon-src']
+        ? iconHTML(button['icon-src'], 'size-4', `${button.label} icon`)
+        : '';
+
+      return button.link ? `
+        <a href="${button.link}" class="btn btn-secondary btn-sm" target="_new">
+          ${icon}
+          <span>${button.label}</span>
+        </a>
+      ` : `
+        <span class="btn btn-secondary btn-sm btn-disabled" tabindex="-1" role="button" aria-disabled="true">
+          ${icon}
+          <span>${button.label}</span>
+        </span>
+      `;
+    }).join('') || '';
 
     const cardHTML = `
       <div class="carousel-item lg:w-full">
         <div class="card card-sm image-full bg-base-100 w-80 h-64 shadow-sm lg:w-full">
-          <figure>
-            <img src="${project['thumbs-src']}" alt="${project.name} thumbnail" />
+          <figure class="bg-neutral">
+            ${project['thumbs-src'] ? `<img src="${project['thumbs-src']}" alt="${project.name} thumbnail" data-thumb />` : ''}
           </figure>
           <div class="card-body">
             <h2 class="card-title">
