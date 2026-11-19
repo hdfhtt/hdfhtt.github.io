@@ -8,6 +8,32 @@ profile:
      expand skills and gain experience in the software engineering field.
 
 projects:
+  - vessence:
+    name: Vessence
+    desc: |
+      A ground-up rebuild of the SkinMnemonist prototype into the app I originally imagined. It
+      estimates how much of each skincare product is left from its size and how you use it, then
+      reminds you to restock before you run out. Kotlin Multiplatform with a shared Compose
+      Multiplatform UI, Android-first and iOS-ready.
+    icon-src: "/assets/icons/vessence.png"
+    thumbs-src: "/assets/thumbs/vessence.png"
+    buttons:
+      - label: Coming Soon
+    label: Unreleased
+
+  - smartlube:
+    name: SmartLube 2
+    desc: |
+      A BLE-controlled smart lubricant dispensing system taken on as freelance work. ESP32-H2
+      firmware drives a solenoid valve on a configurable cyclic schedule or in continuous boost
+      mode, paired with a Kotlin Multiplatform app for control, live device state, and over-the-air
+      firmware updates.
+    icon-src: "/assets/icons/smartlube.png"
+    thumbs-src: "/assets/thumbs/smartlube.png"
+    buttons:
+      - label: Coming Soon
+    label: IoT
+
   - skinmnemonist:
     name: SkinMnemonist
     desc: |
@@ -19,10 +45,10 @@ projects:
       - label: Poster
         icon-src: "/assets/brands/imgur.svg"
         link: "https://i.imgur.com/zIsA6qp.jpeg"
-      - label: Download Beta
+      - label: Download
         icon-src: "/assets/brands/googleplay.svg"
         link: "https://play.google.com/store/apps/details?id=dev.hdfhtt.skinmnemonist"
-    new: true
+    label: Discontinued
 
   - cupcakelab:
     name: CupCakeLab
