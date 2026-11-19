@@ -4,84 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hadif Hatta</title>
-  <link href="/favicon.svg" rel="icon" type="image/x-icon" />
+  <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
   <link href="/styles.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+  <script>
+    (() => {
+      const stored = localStorage.getItem('theme');
+
+      if (stored) document.documentElement.dataset.theme = stored;
+    })();
+  </script>
 </head>
 <body class="pt-16 overflow-y-scroll">
   <div class="navbar bg-base-100 shadow-sm fixed top-0 w-full z-50">
-    <div class="flex-1">
-      <a class="btn btn-ghost text-xl"><span class="text-primary material-symbols-rounded">code</span> hdfhtt</a>
+    <div class="navbar-start">
+      <a class="btn btn-ghost text-xl" href="/">
+        <span class="text-primary material-symbols-rounded">code</span>
+        hdfhtt
+      </a>
     </div>
-    <!--
-    <div class="flex-none">
-      <label class="btn btn-ghost swap swap-rotate">
-        <input type="checkbox" class="theme-controller" value="light" />
-
-        <div class="swap-off">
-          <span class="material-symbols-rounded align-middle">light_mode</span>
-        </div>
-
-        <div class="swap-on">
-          <span class="material-symbols-rounded align-middle">dark_mode</span>
-        </div>
+    <div class="navbar-end">
+      <label class="btn btn-ghost btn-circle swap swap-rotate">
+        <input id="theme-toggle" type="checkbox" aria-label="Toggle dark mode" />
+        <span class="swap-off material-symbols-rounded">light_mode</span>
+        <span class="swap-on material-symbols-rounded">dark_mode</span>
       </label>
     </div>
-    -->
   </div>
 
-  <div class="m-4 lg:mx-16 lg:px-4 mockup-window bg-primary-content border border-base-300">
-    <div class="m-4 lg:px-16 grid lg:grid-cols-2 place-content-center text-center lg:text-start">
-      <img id="profile-image-src" class="rounded-full size-16 lg:size-32 mx-auto lg:ml-0 lg:mr-auto" />
-      <p id="profile-name" class="col-start-1 font-semibold py-1 text-xl"></p>
-      <p id="profile-title" class="col-start-1"></p>
-      <p id="profile-title-alt" class="col-start-1 text-sm text-secondary"></p>
-      <div class="col-start-1 mx-auto lg:ml-0 lg:mr-auto my-2 flex gap-2">
-        <button class="btn btn-primary lg:w-48">
-          <a href="https://www.linkedin.com/in/hdfhtt/" target="_new">LinkedIn</a>
-        </button>
-        <button class="btn btn-soft btn-primary lg:w-48">
-          <a href="/assets/Resume.pdf" target="_new">Résumé</a>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="m-4 lg:mx-16 grid gap-4">
-    <div class="collapse collapse-plus bg-primary-content lg:px-16">
-      <input type="radio" name="my-accordion-3" checked="checked" />
-      <div class="collapse-content flex overflow-x-auto snap-x snap-mandatory">
-        <div id="projects-container" class="flex flex-row gap-4 mx-4 my-2"></div>
-      </div>
-      <div class="absolute w-4 lg:w-8 h-full left-0 lg:left-16 bg-gradient-to-r from-primary-content to-transparent pointer-events-none"></div>
-      <div class="absolute w-4 lg:w-8 h-full right-0 lg:right-16 bg-gradient-to-l from-primary-content to-transparent pointer-events-none"></div>
-      <div class="collapse-title text-2xl font-semibold">
-        <span class="material-symbols-rounded align-middle text-secondary size-8 pr-4">folder_special</span>
-        Featured Projects
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+    <div class="hero bg-base-200 rounded-box my-4">
+      <div class="hero-content flex-col gap-8 py-10 text-center lg:flex-row lg:gap-12 lg:text-start">
+        <div class="avatar">
+          <div class="w-28 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 lg:w-36">
+            <img id="profile-image-src" alt="Hadif Hatta" />
+          </div>
+        </div>
+        <div class="max-w-prose">
+          <h1 id="profile-name" class="text-3xl font-semibold"></h1>
+          <p id="profile-title"></p>
+          <p id="profile-title-alt" class="text-secondary text-sm"></p>
+          <p id="profile-summary" class="py-4 text-sm"></p>
+          <div class="flex flex-wrap justify-center gap-2 lg:justify-start">
+            <a class="btn btn-primary lg:w-48" href="https://www.linkedin.com/in/hdfhtt/" target="_new">LinkedIn</a>
+            <a class="btn btn-soft btn-primary lg:w-48" href="/assets/Resume.pdf" target="_new">Résumé</a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="collapse collapse-plus bg-primary-content lg:px-16">
-      <input type="radio" name="my-accordion-3" />
-      <div class="collapse-content flex overflow-x-auto snap-x snap-mandatory">
-        <div id="skills-container" class="flex flex-row gap-4 mx-4 lg:my-2"></div>
+    <div class="grid gap-4 pb-4">
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="checkbox" checked="checked" />
+        <div class="collapse-title text-2xl font-semibold">
+          <span class="material-symbols-rounded align-middle text-secondary size-8 pr-4">folder_special</span>
+          Featured Projects
+        </div>
+        <div class="collapse-content px-0">
+          <div id="projects-container" class="carousel carousel-center gap-4 p-4 lg:grid lg:grid-cols-2 lg:overflow-visible xl:grid-cols-3"></div>
+        </div>
       </div>
-      <div class="absolute w-4 lg:w-8 h-full left-0 lg:left-16 bg-gradient-to-r from-primary-content to-transparent pointer-events-none"></div>
-      <div class="absolute w-4 lg:w-8 h-full right-0 lg:right-16 bg-gradient-to-l from-primary-content to-transparent pointer-events-none"></div>
-      <div class="collapse-title text-2xl font-semibold">
-        <span class="material-symbols-rounded align-middle text-secondary size-8 pr-4">handyman</span>
-        Skills
-      </div>
-    </div>
 
-    <div class="collapse collapse-plus bg-primary-content lg:px-16">
-      <input type="radio" name="my-accordion-3" />
-      <div class="collapse-title text-2xl font-semibold">
-        <span class="material-symbols-rounded align-middle text-secondary size-8 pr-4">school</span>
-        My Journey
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="checkbox" checked="checked" />
+        <div class="collapse-title text-2xl font-semibold">
+          <span class="material-symbols-rounded align-middle text-secondary size-8 pr-4">handyman</span>
+          Skills
+        </div>
+        <div class="collapse-content px-0">
+          <div id="skills-container" class="carousel carousel-center gap-4 p-4 lg:grid lg:grid-cols-2 lg:overflow-visible xl:grid-cols-4"></div>
+        </div>
       </div>
-      <div class="collapse-content lg:text-lg">
-        <ul class="timeline timeline-vertical m-4" id="timeline-container"></ul>
+
+      <div class="collapse collapse-plus bg-base-200">
+        <input type="checkbox" checked="checked" />
+        <div class="collapse-title text-2xl font-semibold">
+          <span class="material-symbols-rounded align-middle text-secondary size-8 pr-4">school</span>
+          My Journey
+        </div>
+        <div class="collapse-content">
+          <ul class="timeline timeline-vertical m-4" id="timeline-container"></ul>
+        </div>
       </div>
     </div>
   </div>
@@ -90,11 +93,11 @@
     <aside>
       <div class="flex flex-row mx-auto items-center font-light">
         <p class="text-xs">This website is carefully crafted with</p>
-        <img class="size-8 p-1" src="/assets/brands/vite.svg" />
+        <img class="size-8 p-1" src="/assets/brands/vite.svg" alt="Vite" />
         +
-        <img class="size-8 p-1" src="/assets/brands/tailwindcss.svg" />
+        <img class="size-8 p-1" src="/assets/brands/tailwindcss.svg" alt="Tailwind CSS" />
         +
-        <img class="size-8 p-1" src="/assets/brands/daisyui.svg" />
+        <img class="size-8 p-1" src="/assets/brands/daisyui.svg" alt="daisyUI" />
         .
       </div>
     </aside>

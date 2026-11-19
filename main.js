@@ -1,8 +1,29 @@
-import yaml from 'js-yaml';
-import contentString from './content.yaml?raw';
+import content from './content.yaml';
 
 try {
-  const content = yaml.load(contentString);
+  // Theme
+  const themeToggle = document.getElementById('theme-toggle');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  if (themeToggle) {
+    const activeTheme = () => document.documentElement.dataset.theme
+      || (prefersDark.matches ? 'night' : 'light');
+
+    themeToggle.checked = activeTheme() === 'night';
+
+    themeToggle.addEventListener('change', () => {
+      const theme = themeToggle.checked ? 'night' : 'light';
+
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem('theme', theme);
+    });
+
+    prefersDark.addEventListener('change', (event) => {
+      if (localStorage.getItem('theme')) return;
+
+      themeToggle.checked = event.matches;
+    });
+  }
 
   // Icons
   const iconPlaceholderHTML = (className) => `
@@ -69,8 +90,8 @@ try {
       </div>
     `;
 
-    const hrBefore = isFirst ? '' : (index === 1 ? '<hr class="bg-base-200" />' : '<hr class="bg-primary" />');
-    const hrAfter = isFirst ? '<hr class="bg-base-200" />' : (index === timeline.length - 1 ? '' : '<hr class="bg-primary" />'); // Simplified ternary
+    const hrBefore = isFirst ? '' : (index === 1 ? '<hr class="bg-base-300" />' : '<hr class="bg-primary" />');
+    const hrAfter = isFirst ? '<hr class="bg-base-300" />' : (index === timeline.length - 1 ? '' : '<hr class="bg-primary" />');
 
     const eventHTML = `
       <li>
@@ -93,29 +114,29 @@ try {
 
   projects.forEach(project => {
     const buttonsHTML = project.buttons?.map(button => `
-      <a href="${button.link}" class="btn btn-secondary" target="_new">
+      <a href="${button.link}" class="btn btn-secondary btn-sm" target="_new">
         ${iconHTML(button['icon-src'], 'size-4', `${button.label} icon`)}
         <span>${button.label}</span>
       </a>
     `).join('') || '';
 
     const cardHTML = `
-      <div class="card bg-base-100 image-full w-80 lg:w-96 h-64 shadow-sm snap-always snap-center">
-        <figure>
-          <img src="${project['thumbs-src']}" alt="${project.name} thumbnail" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            <span>
-              ${iconHTML(project['icon-src'], 'size-10 shadow-md', `${project.name} icon`)}
-            </span>
-            ${project.name}
-            ${project.new ? '<div class="badge badge-primary">NEW</div>' : ''}
-            ${!!project.label ? `<div class="badge badge-neutral uppercase">${project.label}</div>` : ''}
-          </h2>
-          <p class="text-justify text-xs">${project.desc}</p>
-          <div class="card-actions justify-end">
-            ${buttonsHTML}
+      <div class="carousel-item lg:w-full">
+        <div class="card card-sm image-full bg-base-100 w-80 h-64 shadow-sm lg:w-full">
+          <figure>
+            <img src="${project['thumbs-src']}" alt="${project.name} thumbnail" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              ${iconHTML(project['icon-src'], 'size-10 shadow-md rounded', `${project.name} icon`)}
+              ${project.name}
+              ${project.new ? '<span class="badge badge-primary badge-sm">NEW</span>' : ''}
+              ${!!project.label ? `<span class="badge badge-neutral badge-sm uppercase">${project.label}</span>` : ''}
+            </h2>
+            <p class="text-justify text-xs">${project.desc}</p>
+            <div class="card-actions justify-end">
+              ${buttonsHTML}
+            </div>
           </div>
         </div>
       </div>
@@ -127,6 +148,14 @@ try {
   // Skills
   const skills = content.skills;
   const skillsContainer = document.getElementById('skills-container');
+
+  const levelLabels = {
+    1: 'Basic',
+    2: 'Pre Intermediate',
+    3: 'Intermediate',
+    4: 'Proficient',
+    5: 'Advanced',
+  };
 
   skills.forEach(skillCategory => {
     const skillCategoryName = skillCategory.name;
@@ -140,42 +169,28 @@ try {
 
       const isRated = subcategoryData.type === 'rated';
 
-      subcategoriesHTML += `<span class="font-medium capitalize">${subcategoryType}</span>`;
+      subcategoriesHTML += `<h3 class="font-medium capitalize">${subcategoryType}</h3>`;
 
       if (isRated) {
         subcategoriesHTML += `<ul>`;
 
         subcategoryData.items.forEach(item => {
-          const levelBars = Array.from({ length: 5 }, (_, i) => `
-            <div class="h-2 rounded w-full ${i < item.level ? (item.level === 5 ? 'bg-secondary' : 'bg-primary') : 'bg-base-300'}"></div>
+          const levelBars = Array.from({ length: 5 }, (_, index) => `
+            <div class="h-2 w-full rounded ${index < item.level ? (item.level === 5 ? 'bg-secondary' : 'bg-primary') : 'bg-base-300'}"></div>
           `).join('');
 
           subcategoriesHTML += `
-            <li class="pb-2 flex gap-3 items-center">
-              ${iconHTML(item['icon-src'], 'size-10 min-w-10 h-auto max-h-10 bg-base-200 lg:bg-base-100 min-h-10 p-1 rounded', `${item.name} icon`)}
+            <li class="flex items-center gap-3 pb-2">
+              ${iconHTML(item['icon-src'], 'size-10 min-w-10 object-contain rounded bg-base-200 p-1', `${item.name} icon`)}
               <div class="w-full">
-                <div class="flex justify-between">
+                <div class="flex justify-between gap-2">
                   <span class="font-medium">${item.name}</span>
-                  <span>${
-                    item.level === 5
-                    ? 'Advanced'
-                    : item.level === 4
-                    ? 'Proficient'
-                    : item.level === 3
-                    ? 'Intermediate'
-                    : item.level === 2
-                    ? 'Pre Intermdt'
-                    : item.level === 1
-                    ? 'Basic'
-                    : 'Unknown'
-                  }</span>
+                  <span class="text-sm">${levelLabels[item.level] ?? 'Unknown'}</span>
                 </div>
                 <div class="flex gap-2 py-2">
                   ${levelBars}
                 </div>
-                <div class="text-xs">
-                  <span>${item.desc}</span>
-                </div>
+                <div class="text-xs">${item.desc}</div>
               </div>
             </li>
           `;
@@ -183,12 +198,12 @@ try {
 
         subcategoriesHTML += `</ul>`;
       } else {
-        subcategoriesHTML += `<ul class="flex gap-4">`;
+        subcategoriesHTML += `<ul class="flex flex-wrap gap-3 py-2">`;
 
         subcategoryData.items.forEach(item => {
           subcategoriesHTML += `
-            <li class="tooltip pb-2" data-tip="${item.name}">
-              ${iconHTML(item['icon-src'], 'size-10 min-w-10 h-auto max-h-10 bg-base-100 min-h-10 p-1 rounded', `${item.name} icon`)}
+            <li class="tooltip" data-tip="${item.name}">
+              ${iconHTML(item['icon-src'], 'size-10 min-w-10 object-contain rounded bg-base-200 p-1', `${item.name} icon`)}
             </li>
           `;
         });
@@ -198,10 +213,12 @@ try {
     });
 
     const skillCategoryHTML = `
-      <div class="lg:card w-96 lg:w-80 lg:bg-base-200 shadow-sm snap-always snap-center">
-        <div class="card-body py-4 lg:py-8">
-          <h2 class="text-xl font-bold">${skillCategoryName}</h2>
-          ${subcategoriesHTML}
+      <div class="carousel-item lg:w-full">
+        <div class="card card-sm bg-base-100 w-80 shadow-sm lg:w-full">
+          <div class="card-body">
+            <h2 class="card-title">${skillCategoryName}</h2>
+            ${subcategoriesHTML}
+          </div>
         </div>
       </div>
     `;
