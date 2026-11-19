@@ -4,6 +4,23 @@ import contentString from './content.yaml?raw';
 try {
   const content = yaml.load(contentString);
 
+  // Icons
+  const iconPlaceholderHTML = (className) => `
+    <span class="material-symbols-rounded flex items-center justify-center ${className}">image_not_supported</span>
+  `;
+
+  const iconHTML = (src, className, alt) => src
+    ? `<img class="${className}" src="${src}" alt="${alt}" data-icon />`
+    : iconPlaceholderHTML(className);
+
+  document.addEventListener('error', (event) => {
+    const image = event.target;
+
+    if (image.tagName !== 'IMG' || !image.hasAttribute('data-icon')) return;
+
+    image.outerHTML = iconPlaceholderHTML(image.className);
+  }, true);
+
   // Profile elements
   const profileElementMapping = {
     'profile-name': 'name',
@@ -77,7 +94,7 @@ try {
   projects.forEach(project => {
     const buttonsHTML = project.buttons?.map(button => `
       <a href="${button.link}" class="btn btn-secondary" target="_new">
-        <img class="size-4" src="${button['icon-src']}" alt="${button.label} icon" />
+        ${iconHTML(button['icon-src'], 'size-4', `${button.label} icon`)}
         <span>${button.label}</span>
       </a>
     `).join('') || '';
@@ -90,7 +107,7 @@ try {
         <div class="card-body">
           <h2 class="card-title">
             <span>
-              <img class="size-10 shadow-md" src="${project['icon-src']}" alt="${project.name} icon" />
+              ${iconHTML(project['icon-src'], 'size-10 shadow-md', `${project.name} icon`)}
             </span>
             ${project.name}
             ${project.new ? '<div class="badge badge-primary">NEW</div>' : ''}
@@ -135,7 +152,7 @@ try {
 
           subcategoriesHTML += `
             <li class="pb-2 flex gap-3 items-center">
-              <img class="size-10 min-w-10 h-auto max-h-10 bg-base-200 lg:bg-base-100 min-h-10 p-1 rounded" src="${item['icon-src']}" />
+              ${iconHTML(item['icon-src'], 'size-10 min-w-10 h-auto max-h-10 bg-base-200 lg:bg-base-100 min-h-10 p-1 rounded', `${item.name} icon`)}
               <div class="w-full">
                 <div class="flex justify-between">
                   <span class="font-medium">${item.name}</span>
@@ -171,7 +188,7 @@ try {
         subcategoryData.items.forEach(item => {
           subcategoriesHTML += `
             <li class="tooltip pb-2" data-tip="${item.name}">
-              <img class="size-10 min-w-10 h-auto max-h-10 bg-base-100 min-h-10 p-1 rounded" src="${item['icon-src']}" />
+              ${iconHTML(item['icon-src'], 'size-10 min-w-10 h-auto max-h-10 bg-base-100 min-h-10 p-1 rounded', `${item.name} icon`)}
             </li>
           `;
         });
