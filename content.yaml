@@ -1,6 +1,6 @@
 profile:
   name: Hadif Hatta
-  image-src: "https://media.licdn.com/dms/image/v2/D5603AQFj9Rtl_v1WRg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1665908302206?e=2147483647&v=beta&t=qaNIYKtZI-02Q-laEGFIhPKUAVAyVy0vLcp9DYB7AJQ"
+  image-src: "/assets/profile.jpg"
   title: Android Developer
   title-alt: VigTech Labs Sdn Bhd
   summary: |
@@ -13,14 +13,14 @@ projects:
     desc: |
       A mobile application developed for my final year project during Bachelor's degree, designed to help users track
       and manage their skincare product usage, ensuring timely replenishment.
-    icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/smm.png?raw=true"
-    thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/smm.png?raw=true"
+    icon-src: "/assets/icons/smm.png"
+    thumbs-src: "/assets/thumbs/smm.png"
     buttons:
       - label: Poster
-        icon-src: "https://unpkg.com/simple-icons@v14/icons/imgur.svg"
+        icon-src: "/assets/brands/imgur.svg"
         link: "https://i.imgur.com/zIsA6qp.jpeg"
       - label: Download Beta
-        icon-src: "https://unpkg.com/simple-icons@v14/icons/googleplay.svg"
+        icon-src: "/assets/brands/googleplay.svg"
         link: "https://play.google.com/store/apps/details?id=dev.hdfhtt.skinmnemonist"
     new: true
 
@@ -30,14 +30,14 @@ projects:
       A Flutter-based mobile application showcasing the implementation of the framework and Material
       Design principles. It allows users to browse, search, and save their favorite cupcake recipes
       using the Spoonacular API.
-    icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/cupcakelab.png?raw=true"
-    thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/cupcakelab.png?raw=true"
+    icon-src: "/assets/icons/cupcakelab.png"
+    thumbs-src: "/assets/thumbs/cupcakelab.png"
     buttons:
       - label: Design
-        icon-src: "https://unpkg.com/simple-icons@v14/icons/figma.svg"
+        icon-src: "/assets/brands/figma.svg"
         link: "https://www.figma.com/design/s3r5E9pcbQcgzc0reHnzXm/App%3A-CupCakeLab?node-id=54195-34798&t=QZXv0L8uJcp7rblk-1"
       - label: Demo
-        icon-src: "https://unpkg.com/simple-icons@v14/icons/github.svg"
+        icon-src: "/assets/brands/github.svg"
         link: "https://github.com/hdfhtt/CupCakeLab"
 
   - lapar:
@@ -46,11 +46,11 @@ projects:
       A conceptual mobile application designed for a Bahasa Melayu class project. It aims to
       streamline the food ordering process for the IIUM Gombak Campus community at cafeterias and
       restaurants.
-    icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/lapar.png?raw=true"
-    thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/lapar.png?raw=true"
+    icon-src: "/assets/icons/lapar.png"
+    thumbs-src: "/assets/thumbs/lapar.png"
     buttons:
       - label: Design
-        icon-src: "https://unpkg.com/simple-icons@v14/icons/figma.svg"
+        icon-src: "/assets/brands/figma.svg"
         link: "https://www.figma.com/design/kvaclNuFEoFeIaUd1XlXyN/Sistem-Aplikasi-Lapar?node-id=0-1&t=flCKxkpnmhx1ZrCq-1"
 
   - kproject.gis:
@@ -58,11 +58,10 @@ projects:
     desc: |
       As part of my internship during Diploma, this web-based Geographical Information System (GIS) platform is built to identify potential strategic locations for new branches.
       This data science project showcases my development and data science skills.
-    icon-src: "https://scontent.fkul19-3.fna.fbcdn.net/v/t39.30808-1/331164588_542153277893393_7835782481759126426_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeEIp_aIp970wRiVuwTgbRLdIuBKU5DbSoUi4EpTkNtKhSuRfDyOa2JeKZnnH3xiPyWYzb3x389dgQjto-D_5dPf&_nc_ohc=dYSwslahyfQQ7kNvgHXcLzW&_nc_oc=AdirJgeVQXuIKXyoMv5dgyH9AYZfNg399fWLPwSdhJUS0xlF2fNaa7TLy42R7VgQ_KA&_nc_zt=24&_nc_ht=scontent.fkul19-3.fna&_nc_gid=AuL5LjZc79ijNIaUgAJ5MD4&oh=00_AYAimgnkIeOGhJ78suqXeOO-Oa4BGoubdHNZLmIwWYbIqw&oe=67C16198"
-    thumbs-src: "https://i.imgur.com/lLjS2UO.jpeg"
+    thumbs-src: "/assets/thumbs/kproject-gis.jpg"
     buttons:
       - label: Screenshots
-        icon-src: "https://unpkg.com/simple-icons@v14/icons/imgur.svg"
+        icon-src: "/assets/brands/imgur.svg"
         link: "https://imgur.com/a/kproject-gis-snapshots-RTtVdBJ"
 
   - pastel-ux:
@@ -71,14 +70,14 @@ projects:
       A project focused on creating a soft and delicate pastel-colored icon pack based on Google's
       Material Design guidelines. Initially conceived as a UI/UX redesign project, it ultimately
       concentrated on color palettes and icon design. This app achieved 100K of downloads on Play Store.
-    icon-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/icons/pastel-ux.png?raw=true"
-    thumbs-src: "https://github.com/hdfhtt/hdfhtt.github.io/blob/main/assets/thumbs/pastel-ux.png?raw=true"
+    icon-src: "/assets/icons/pastel-ux.png"
+    thumbs-src: "/assets/thumbs/pastel-ux.png"
     buttons:
       - label: Screenshots
-        icon-src: "https://unpkg.com/simple-icons@v14/icons/imgur.svg"
+        icon-src: "/assets/brands/imgur.svg"
         link: "https://imgur.com/a/pastel-ux-feedbacks-8vpOENB"
       - label: Web Archive
-        icon-src: "https://unpkg.com/simple-icons@v14/icons/googleplay.svg"
+        icon-src: "/assets/brands/googleplay.svg"
         link: "https://web.archive.org/web/20220525070416/https://play.google.com/store/apps/details?id=hdfhtt.pastel.app"
     label: Discontinued
 
@@ -112,32 +111,32 @@ skills:
           type: rated
           items:
             - name: Flutter
-              icon-src: "https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg"
+              icon-src: "/assets/brands/flutter.svg"
               level: 4
               desc: Dart
             - name: Jetpack Compose
-              icon-src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC97Z8BResg5dlPqczsRCFhP6zewWX0X0e7fVPG-G7PuUZwwZVsi9OPoqJYkgqT2h0FI95SsmWzVEgpt8b8HAqFiIxZ98TFtY4lE0b8UrtVJ2HrJebRwl6C9DslsQDl9KnBIrdHS6LtkY/s1600/jetpack+compose+icon_RGB.png"
+              icon-src: "/assets/brands/jetpack-compose.png"
               level: 5
               desc: Kotlin
             - name: Android (Native)
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/3/31/Android_robot_head.svg"
+              icon-src: "/assets/brands/android.svg"
               level: 5
               desc: Java, Kotlin
       - design:
           type: rated
           items:
             - name: Material Design
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Material_Design_Logo.svg"
+              icon-src: "/assets/brands/material-design.svg"
               level: 5
               desc: Design System
       - tools:
           items:
             - name: Android Studio
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Android_Studio_icon_%282023%29.svg"
+              icon-src: "/assets/brands/android-studio.svg"
             - name: IntelliJ IDEA
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg"
+              icon-src: "/assets/brands/intellij-idea.svg"
             - name: Git
-              icon-src: "https://unpkg.com/simple-icons@v14/icons/git.svg"
+              icon-src: "/assets/brands/git.svg"
 
   - name: Web Development
     content:
@@ -145,46 +144,46 @@ skills:
           type: rated
           items:
             - name: Next.js
-              icon-src: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/nextjs-icon.svg"
+              icon-src: "/assets/brands/nextjs.svg"
               level: 4
               desc: JavaScript
             - name: Vite
-              icon-src: "https://vite.dev/logo.svg"
+              icon-src: "/assets/brands/vite.svg"
               level: 3
               desc: JavaScript
             - name: Tailwind CSS
-              icon-src: "https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg"
+              icon-src: "/assets/brands/tailwindcss.svg"
               level: 5
               desc: CSS
       - backend:
           type: rated
           items:
             - name: Node.js
-              icon-src: "https://nodejs.org/static/logos/jsIconGreen.svg"
+              icon-src: "/assets/brands/nodejs.svg"
               level: 5
               desc: JavaScript
             - name: Flask
-              icon-src: "https://icon.icepanel.io/Technology/png-shadow-512/Flask.png"
+              icon-src: "/assets/brands/flask.png"
               level: 2
               desc: Python
             - name: PHP
-              icon-src: "https://www.php.net/images/logos/new-php-logo.svg"
+              icon-src: "/assets/brands/php.svg"
               level: 2
               desc: PHP
       - deployment:
           items:
             - name: Heroku
-              icon-src: "https://www.svgrepo.com/download/353869/heroku-icon.svg"
+              icon-src: "/assets/brands/heroku.svg"
             - name: Vercel
-              icon-src: "https://static.wikia.nocookie.net/logopedia/images/a/a7/Vercel_favicon.svg"
+              icon-src: "/assets/brands/vercel.svg"
       - tools:
           items:
             - name: Visual Studio Code
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
+              icon-src: "/assets/brands/vscode.svg"
             - name: npm
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg"
+              icon-src: "/assets/brands/npm.svg"
             - name: Git
-              icon-src: "https://unpkg.com/simple-icons@v14/icons/git.svg"
+              icon-src: "/assets/brands/git.svg"
 
   - name: Desktop Development
     content:
@@ -192,31 +191,30 @@ skills:
           type: rated
           items:
             - name: .NET Framework
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg"
+              icon-src: "/assets/brands/dotnet.svg"
               level: 4
               desc: C#
             - name: WPF
-              icon-src: "https://www.ambient-it.net/wp-content/uploads/2016/04/wpf-logo-175.png.webp"
+              icon-src: "/assets/brands/wpf.webp"
               level: 3
               desc: C#, XAML
             - name: Java Swing
-              icon-src: "https://www.svgrepo.com/download/184143/java.svg"
+              icon-src: "/assets/brands/java.svg"
               level: 4
               desc: Java
             - name: JavaFX
-              icon-src: "https://www.svgrepo.com/download/184143/java.svg"
+              icon-src: "/assets/brands/java.svg"
               level: 3
               desc: Java
       - deployment:
           items:
             - name: InstallShield
-              icon-src: "https://static.wikia.nocookie.net/logopedia/images/8/86/InstallShield_Setup_icon_%282014-present%29.png"
       - tools:
           items:
             - name: Visual Studio
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_Icon_2019.svg"
+              icon-src: "/assets/brands/visual-studio.svg"
             - name: Git
-              icon-src: "https://unpkg.com/simple-icons@v14/icons/git.svg"
+              icon-src: "/assets/brands/git.svg"
 
   - name: Data Science & ML
     content:
@@ -224,42 +222,42 @@ skills:
           type: rated
           items:
             - name: Python
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+              icon-src: "/assets/brands/python.svg"
               level: 5
               desc: ""
             - name: R
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg"
+              icon-src: "/assets/brands/r.svg"
               level: 1
               desc: ""
       - libraries:
           type: rated
           items:
             - name: Scikit-learn
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
+              icon-src: "/assets/brands/scikit-learn.svg"
               level: 3
               desc: ""
             - name: NumPy
-              icon-src: "https://www.svgrepo.com/download/354127/numpy.svg"
+              icon-src: "/assets/brands/numpy.svg"
               level: 2
               desc: ""
             - name: Pandas
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/2/22/Pandas_mark.svg"
+              icon-src: "/assets/brands/pandas.svg"
               level: 2
               desc: ""
             - name: Matplotlib
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg"
+              icon-src: "/assets/brands/matplotlib.svg"
               level: 2
               desc: ""
             - name: Keras
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg"
+              icon-src: "/assets/brands/keras.svg"
               level: 2
               desc: ""
       - environment:
           items:
             - name: PyCharm
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg"
+              icon-src: "/assets/brands/pycharm.svg"
             - name: Google Colab
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg"
+              icon-src: "/assets/brands/google-colab.svg"
             - name: R Project
-              icon-src: "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg"
+              icon-src: "/assets/brands/r.svg"
 
