@@ -145,6 +145,14 @@ skills:
               icon-src: "/assets/brands/jetpack-compose.png"
               level: 5
               desc: Kotlin
+            - name: Kotlin Multiplatform
+              icon-src: "/assets/brands/kotlin.svg"
+              level: 4
+              desc: Kotlin
+            - name: Compose Multiplatform
+              icon-src: "/assets/brands/jetpack-compose.png"
+              level: 4
+              desc: Kotlin
             - name: Android (Native)
               icon-src: "/assets/brands/android.svg"
               level: 5
@@ -287,4 +295,66 @@ skills:
               icon-src: "/assets/brands/google-colab.svg"
             - name: R Project
               icon-src: "/assets/brands/r.svg"
+
+  - name: Embedded & IoT
+    content:
+      - firmware:
+          type: rated
+          items:
+            - name: ESP-IDF
+              icon-src: "/assets/brands/espressif.svg"
+              level: 3
+              desc: C
+      - connectivity:
+          type: rated
+          items:
+            - name: Bluetooth Low Energy
+              icon-src: "/assets/brands/bluetooth.svg"
+              level: 3
+              desc: GATT
+      - tools:
+          items:
+            - name: Visual Studio Code
+              icon-src: "/assets/brands/vscode.svg"
+            - name: Git
+              icon-src: "/assets/brands/git.svg"
+
+  - name: Game Development
+    content:
+      - engine:
+          type: rated
+          items:
+            - name: Unreal Engine
+              icon-src: "/assets/brands/unrealengine.svg"
+              level: 2
+              desc: C++
+      - tools:
+          items:
+            - name: Visual Studio Code
+              icon-src: "/assets/brands/vscode.svg"
+            - name: Git
+              icon-src: "/assets/brands/git.svg"
+
+  - name: Cloud & DevOps
+    content:
+      - platform:
+          type: rated
+          items:
+            - name: Microsoft Azure
+              icon-src: "/assets/brands/azure.svg"
+              level: 3
+              desc: Functions, Container Apps
+      - containers:
+          type: rated
+          items:
+            - name: Docker
+              icon-src: "/assets/brands/docker.svg"
+              level: 2
+              desc: ""
+      - tools:
+          items:
+            - name: Visual Studio Code
+              icon-src: "/assets/brands/vscode.svg"
+            - name: Git
+              icon-src: "/assets/brands/git.svg"
 
