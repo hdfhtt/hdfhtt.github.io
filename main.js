@@ -115,7 +115,8 @@ try {
   });
 
   // Projects
-  const projects = content.projects;
+  const projectNames = new Set(content.projects.map(project => project.name));
+  const projects = content.projects.filter(project => project.featured !== false);
   const projectsContainer = document.getElementById('projects-container');
 
   projects.forEach(project => {
@@ -196,6 +197,28 @@ try {
             <div class="h-2 w-full rounded ${index < item.level ? (item.level === 5 ? 'bg-secondary' : 'bg-primary') : 'bg-base-300'}"></div>
           `).join('');
 
+          const usedIn = (item['used-in'] ?? []).filter(name => {
+            if (projectNames.has(name)) return true;
+
+            console.warn(`Skill "${item.name}" references unknown project "${name}".`);
+            return false;
+          });
+
+          // Both variants are rendered; fitUsedInBadges() picks one once the row
+          // has been laid out, since whether the names fit depends on card width.
+          const usedInHTML = !usedIn.length ? '' : `
+            <span class="flex gap-1" data-used-in>
+              <span class="flex gap-1" data-variant="full">
+                ${usedIn.map(name => `<span class="badge badge-ghost badge-xs">${name}</span>`).join('')}
+              </span>
+              <span class="hidden" data-variant="short">
+                <span class="tooltip" data-tip="${usedIn.join(', ')}" title="${usedIn.join(', ')}">
+                  <span class="badge badge-ghost badge-xs">${usedIn.length} Project${usedIn.length === 1 ? '' : 's'}</span>
+                </span>
+              </span>
+            </span>
+          `;
+
           subcategoriesHTML += `
             <li class="flex items-center gap-3 pb-2">
               ${iconHTML(item['icon-src'], 'size-10 min-w-10 object-contain rounded bg-white p-1', `${item.name} icon`)}
@@ -207,7 +230,10 @@ try {
                 <div class="flex gap-2 py-2">
                   ${levelBars}
                 </div>
-                <div class="text-xs">${item.desc}</div>
+                <div class="flex flex-wrap items-center justify-between gap-1 text-xs" data-skill-meta>
+                  <span data-desc>${item.desc}</span>
+                  ${usedInHTML}
+                </div>
               </div>
             </li>
           `;
@@ -242,6 +268,48 @@ try {
 
     skillsContainer.innerHTML += skillCategoryHTML;
   });
+
+  // Show every project name when the row has space for it, otherwise collapse to
+  // a count. Reads are batched after the writes to avoid a reflow per row.
+  const fitUsedInBadges = () => {
+    const groups = [...document.querySelectorAll('[data-used-in]')];
+
+    groups.forEach(group => {
+      group.querySelector('[data-variant="full"]').classList.remove('hidden');
+      group.querySelector('[data-variant="short"]').classList.add('hidden');
+    });
+
+    const overflowing = groups.filter(group => {
+      const row = group.closest('[data-skill-meta]');
+      const full = group.querySelector('[data-variant="full"]');
+      const desc = row.querySelector('[data-desc]');
+
+      if (full.scrollWidth > row.clientWidth) return true;
+      if (!desc.textContent.trim()) return false;
+
+      return full.getBoundingClientRect().top - desc.getBoundingClientRect().top > 1;
+    });
+
+    overflowing.forEach(group => {
+      group.querySelector('[data-variant="full"]').classList.add('hidden');
+      group.querySelector('[data-variant="short"]').classList.remove('hidden');
+    });
+  };
+
+  fitUsedInBadges();
+  window.addEventListener('resize', fitUsedInBadges);
+  document.fonts?.ready.then(fitUsedInBadges);
+
+  // Tooling used across every category
+  const toolingContainer = document.getElementById('tooling-container');
+
+  if (toolingContainer && content.tooling) {
+    toolingContainer.innerHTML = content.tooling.map(tool => `
+      <li class="tooltip" data-tip="${tool.name}">
+        ${iconHTML(tool['icon-src'], 'size-8 min-w-8 object-contain rounded bg-white p-1', `${tool.name} icon`)}
+      </li>
+    `).join('');
+  }
 
 } catch (error) {
   console.error('Error parsing or processing YAML:', error);

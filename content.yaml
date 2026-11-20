@@ -108,6 +108,15 @@ projects:
         link: "https://web.archive.org/web/20220525070416/https://play.google.com/store/apps/details?id=hdfhtt.pastel.app"
     label: Discontinued
 
+  # Referenced by skill `used-in` badges only; not shown as cards.
+  - warung:
+    name: Warung
+    featured: false
+
+  - 329:
+    name: "329"
+    featured: false
+
   # ...
   # - project-n
 
@@ -141,22 +150,27 @@ skills:
               icon-src: "/assets/brands/flutter.svg"
               level: 4
               desc: Dart
+              used-in: [CupCakeLab]
             - name: Jetpack Compose
               icon-src: "/assets/brands/jetpack-compose.png"
               level: 5
               desc: Kotlin
+              used-in: [SkinMnemonist]
             - name: Kotlin Multiplatform
               icon-src: "/assets/brands/kotlin.svg"
               level: 4
               desc: Kotlin
+              used-in: [Vessence, SmartLube 2]
             - name: Compose Multiplatform
               icon-src: "/assets/brands/jetpack-compose.png"
               level: 4
               desc: Kotlin
+              used-in: [Vessence, SmartLube 2]
             - name: Android (Native)
               icon-src: "/assets/brands/android.svg"
               level: 5
               desc: Java, Kotlin
+              used-in: [SkinMnemonist]
       - design:
           type: rated
           items:
@@ -164,14 +178,13 @@ skills:
               icon-src: "/assets/brands/material-design.svg"
               level: 5
               desc: Design System
+              used-in: [SkinMnemonist, CupCakeLab, Vessence]
       - tools:
           items:
             - name: Android Studio
               icon-src: "/assets/brands/android-studio.svg"
             - name: IntelliJ IDEA
               icon-src: "/assets/brands/intellij-idea.svg"
-            - name: Git
-              icon-src: "/assets/brands/git.svg"
 
   - name: Web Development
     content:
@@ -197,6 +210,7 @@ skills:
               icon-src: "/assets/brands/nodejs.svg"
               level: 5
               desc: JavaScript
+              used-in: ["329"]
             - name: Flask
               icon-src: "/assets/brands/flask.png"
               level: 2
@@ -213,43 +227,8 @@ skills:
               icon-src: "/assets/brands/vercel.svg"
       - tools:
           items:
-            - name: Visual Studio Code
-              icon-src: "/assets/brands/vscode.svg"
             - name: npm
               icon-src: "/assets/brands/npm.svg"
-            - name: Git
-              icon-src: "/assets/brands/git.svg"
-
-  - name: Desktop Development
-    content:
-      - framework:
-          type: rated
-          items:
-            - name: .NET Framework
-              icon-src: "/assets/brands/dotnet.svg"
-              level: 4
-              desc: C#
-            - name: WPF
-              icon-src: "/assets/brands/wpf.webp"
-              level: 3
-              desc: C#, XAML
-            - name: Java Swing
-              icon-src: "/assets/brands/java.svg"
-              level: 4
-              desc: Java
-            - name: JavaFX
-              icon-src: "/assets/brands/java.svg"
-              level: 3
-              desc: Java
-      - deployment:
-          items:
-            - name: InstallShield
-      - tools:
-          items:
-            - name: Visual Studio
-              icon-src: "/assets/brands/visual-studio.svg"
-            - name: Git
-              icon-src: "/assets/brands/git.svg"
 
   - name: Data Science & ML
     content:
@@ -296,6 +275,40 @@ skills:
             - name: R Project
               icon-src: "/assets/brands/r.svg"
 
+  - name: Desktop & Game Development
+    content:
+      - framework:
+          type: rated
+          items:
+            - name: .NET Framework
+              icon-src: "/assets/brands/dotnet.svg"
+              level: 4
+              desc: C#
+            - name: WPF
+              icon-src: "/assets/brands/wpf.webp"
+              level: 3
+              desc: C#, XAML
+            - name: Java Swing
+              icon-src: "/assets/brands/java.svg"
+              level: 4
+              desc: Java
+            - name: JavaFX
+              icon-src: "/assets/brands/java.svg"
+              level: 3
+              desc: Java
+            - name: Unreal Engine
+              icon-src: "/assets/brands/unrealengine.svg"
+              level: 2
+              desc: C++
+              used-in: [Warung]
+      - deployment:
+          items:
+            - name: InstallShield
+      - tools:
+          items:
+            - name: Visual Studio
+              icon-src: "/assets/brands/visual-studio.svg"
+
   - name: Embedded & IoT
     content:
       - firmware:
@@ -305,6 +318,7 @@ skills:
               icon-src: "/assets/brands/espressif.svg"
               level: 3
               desc: C
+              used-in: [SmartLube 2]
       - connectivity:
           type: rated
           items:
@@ -312,28 +326,7 @@ skills:
               icon-src: "/assets/brands/bluetooth.svg"
               level: 3
               desc: GATT
-      - tools:
-          items:
-            - name: Visual Studio Code
-              icon-src: "/assets/brands/vscode.svg"
-            - name: Git
-              icon-src: "/assets/brands/git.svg"
-
-  - name: Game Development
-    content:
-      - engine:
-          type: rated
-          items:
-            - name: Unreal Engine
-              icon-src: "/assets/brands/unrealengine.svg"
-              level: 2
-              desc: C++
-      - tools:
-          items:
-            - name: Visual Studio Code
-              icon-src: "/assets/brands/vscode.svg"
-            - name: Git
-              icon-src: "/assets/brands/git.svg"
+              used-in: [SmartLube 2]
 
   - name: Cloud & DevOps
     content:
@@ -344,6 +337,7 @@ skills:
               icon-src: "/assets/brands/azure.svg"
               level: 3
               desc: Functions, Container Apps
+              used-in: ["329"]
       - containers:
           type: rated
           items:
@@ -351,10 +345,11 @@ skills:
               icon-src: "/assets/brands/docker.svg"
               level: 2
               desc: ""
-      - tools:
-          items:
-            - name: Visual Studio Code
-              icon-src: "/assets/brands/vscode.svg"
-            - name: Git
-              icon-src: "/assets/brands/git.svg"
+              used-in: ["329"]
+
+tooling:
+  - name: Git
+    icon-src: "/assets/brands/git.svg"
+  - name: Visual Studio Code
+    icon-src: "/assets/brands/vscode.svg"
 
