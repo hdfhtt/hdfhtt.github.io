@@ -84,6 +84,7 @@ projects:
     desc: |
       As part of my internship during Diploma, this web-based Geographical Information System (GIS) platform is built to identify potential strategic locations for new branches.
       This data science project showcases my development and data science skills.
+    icon-src: "/assets/icons/kproject-gis.png"
     thumbs-src: "/assets/thumbs/kproject-gis.jpg"
     buttons:
       - label: Screenshots
