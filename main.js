@@ -26,8 +26,10 @@ try {
   }
 
   // Icons
+  // The icon tile is white so monochrome brand marks stay legible in both themes.
+  // The placeholder glyph needs the opposite, so it drops any inherited background.
   const iconPlaceholderHTML = (className) => `
-    <span class="material-symbols-rounded flex items-center justify-center ${className}">image_not_supported</span>
+    <span class="material-symbols-rounded flex items-center justify-center ${className.replace(/\bbg-\S+/g, '').trim()} bg-base-200">image_not_supported</span>
   `;
 
   const iconHTML = (src, className, alt) => src
@@ -196,7 +198,7 @@ try {
 
           subcategoriesHTML += `
             <li class="flex items-center gap-3 pb-2">
-              ${iconHTML(item['icon-src'], 'size-10 min-w-10 object-contain rounded bg-base-200 p-1', `${item.name} icon`)}
+              ${iconHTML(item['icon-src'], 'size-10 min-w-10 object-contain rounded bg-white p-1', `${item.name} icon`)}
               <div class="w-full">
                 <div class="flex justify-between gap-2">
                   <span class="font-medium">${item.name}</span>
@@ -218,7 +220,7 @@ try {
         subcategoryData.items.forEach(item => {
           subcategoriesHTML += `
             <li class="tooltip" data-tip="${item.name}">
-              ${iconHTML(item['icon-src'], 'size-10 min-w-10 object-contain rounded bg-base-200 p-1', `${item.name} icon`)}
+              ${iconHTML(item['icon-src'], 'size-10 min-w-10 object-contain rounded bg-white p-1', `${item.name} icon`)}
             </li>
           `;
         });
