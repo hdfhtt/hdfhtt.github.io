@@ -121,12 +121,19 @@ try {
 
   projects.forEach(project => {
     const buttonsHTML = project.buttons?.map(button => {
-      const icon = button['icon-src']
+      // `icon` names a Material Symbol, for actions with no brand mark to use.
+      const icon = button.icon
+        ? `<span class="material-symbols-rounded text-base leading-none">${button.icon}</span>`
+        : button['icon-src']
         ? iconHTML(button['icon-src'], 'size-4', `${button.label} icon`)
         : '';
 
+      // Custom schemes such as minecraft:// hand off to an installed app, so they
+      // must not open a tab that would be left blank when no handler exists.
+      const opensTab = /^https?:/i.test(button.link ?? '');
+
       return button.link ? `
-        <a href="${button.link}" class="btn btn-secondary btn-sm" target="_new">
+        <a href="${button.link}" class="btn btn-secondary btn-sm"${opensTab ? ' target="_new"' : ''}>
           ${icon}
           <span>${button.label}</span>
         </a>
