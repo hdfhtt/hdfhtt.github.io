@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — SmartLube</title>
+  <meta name="description" content="How the SmartLube companion app handles your information." />
+  <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+  <style>
+    :root { color-scheme: light dark; --rule: rgba(128, 128, 128, 0.25); }
+    body {
+      margin: 0 auto;
+      max-width: 42rem;
+      padding: 3rem 1.5rem 6rem;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.65;
+    }
+    h1 { font-size: 2.25rem; margin: 0; letter-spacing: -0.03em; }
+    h2 {
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      margin: 2.5rem 0 0.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+    }
+    p, li { margin: 0.75rem 0; }
+    ul { padding-left: 1.25rem; }
+    a { color: inherit; }
+    .updated { opacity: 0.6; margin: 0.5rem 0 0; font-size: 0.9rem; }
+    .lead { font-size: 1.05rem; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>SmartLube Privacy Policy</h1>
+    <p class="updated">Last updated: 29 November 2026</p>
+
+    <p class="lead">
+      SmartLube (&ldquo;the app&rdquo;) is the companion app for a SmartLube chain oiler fitted to a
+      motorbike. This policy explains what the app does with your information. It applies to the
+      Android and iOS versions of the app.
+    </p>
+
+    <h2>The short version</h2>
+    <p>
+      The app has no account, no sign-up and no analytics. We do not collect, transmit or sell your
+      personal information. Everything the app remembers is stored on your own phone, and the only
+      server it ever contacts is GitHub, to look for firmware updates for your oiler.
+    </p>
+
+    <h2>What the app stores on your phone</h2>
+    <ul>
+      <li>The names you give your oilers, for example &ldquo;Kawasaki W175&rdquo;.</li>
+      <li>
+        The identifier each oiler broadcasts, which is derived from its hardware and is used to
+        recognise the same unit next time.
+      </li>
+      <li>Which oiler you connected to last, so the app can reconnect to it.</li>
+    </ul>
+    <p>
+      This is held in your phone&rsquo;s own app storage (Android SharedPreferences, iOS
+      UserDefaults). It never leaves your device by way of the app. If you have Android backup
+      enabled for your Google account, your phone&rsquo;s operating system may include this
+      app&rsquo;s stored data in your personal device backup; that backup belongs to you and is
+      governed by Google&rsquo;s terms, not by us.
+    </p>
+    <p>
+      Your oiler&rsquo;s settings &mdash; power state, boost mode and flow duration &mdash; are
+      stored on the oiler itself, not by the app.
+    </p>
+
+    <h2>Bluetooth and location permissions</h2>
+    <p>
+      The app uses Bluetooth to find and control your oiler. Android requires the &ldquo;Nearby
+      devices&rdquo; permission (BLUETOOTH_SCAN and BLUETOOTH_CONNECT) for this.
+    </p>
+    <p>
+      On Android 11 and older, the operating system additionally requires the location permission
+      before any app is allowed to scan for Bluetooth devices. The app asks for it only for that
+      reason. It does not use, derive, store or transmit your location, and it has no location
+      features.
+    </p>
+    <p>
+      Bluetooth is used only to communicate with your oiler. No data gathered over Bluetooth is sent
+      anywhere.
+    </p>
+
+    <h2>Internet access</h2>
+    <p>
+      The app connects to the internet for one purpose: checking whether newer firmware has been
+      published for your oiler, and downloading it when you choose to install it. These requests go
+      to GitHub, where the firmware releases are published.
+    </p>
+    <p>
+      As with any web request, GitHub receives the technical information needed to answer it,
+      including your IP address. That information is handled by GitHub under its own
+      <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement">privacy
+      statement</a>. We do not receive it, and we operate no server of our own.
+    </p>
+
+    <h2>What we do not do</h2>
+    <ul>
+      <li>We do not collect or store personal information.</li>
+      <li>We do not use analytics, advertising or crash-reporting services.</li>
+      <li>We do not track you across apps or websites.</li>
+      <li>We do not sell or share your information with anyone.</li>
+      <li>We do not require an account.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>
+      The app is not directed to children. It is a tool for owners of a motorbike chain oiler and
+      has no features of interest to children.
+    </p>
+
+    <h2>Removing your data</h2>
+    <p>
+      Hold a saved device in the app&rsquo;s device picker and choose Forget to remove that oiler and
+      its name. Uninstalling the app removes everything it stored on your phone. If your phone backs
+      up app data to your Google account, remove it through your Google account&rsquo;s backup
+      settings.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      If this policy changes, the updated version will be published at
+      <a href="https://hdfhtt.github.io/smartlube/privacy/">https://hdfhtt.github.io/smartlube/privacy/</a>
+      with a new date at the top. Significant changes will also be noted in the app&rsquo;s release
+      notes.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy:
+      <a href="mailto:hadif.hatta@outlook.com">hadif.hatta@outlook.com</a>
+    </p>
+
+    <footer>
+      <a href="/">Back to the homepage</a>
+    </footer>
+  </main>
+</body>
+</html>
